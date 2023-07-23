@@ -1,0 +1,17 @@
+/*Calcular el nuevo salario de un obrero si obtuvo un incremento del 25% sobre su salario anterior.*/
+
+import javax.swing.JOptionPane;
+
+public class Salario {
+	public static void main(String[] args) {
+		double salarioActual, salarioAnterior;
+		final double INCREMENTO= 0.25;
+		String mensaje;
+		salarioAnterior= Double.parseDouble(JOptionPane.showInputDialog("Digite el salario para saber su incremento"));
+		salarioActual= (salarioAnterior*INCREMENTO)+salarioAnterior;
+		mensaje= "AUMENTO SALARIO \n";
+		mensaje+="Salario Anterior: "+salarioAnterior+"\n";
+		mensaje+="Salario Actual: "+salarioActual;
+		JOptionPane.showMessageDialog(null, mensaje, "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	}
+}

@@ -1,0 +1,34 @@
+/*Cree un algoritmo imprima el nombre, apellido, documento de identidad, edad y profesión de una 
+ * persona de la siguiente manera: 
+
+Datos ingresados:
+Nombre completo: Pepito Pérez
+Documento: 10934566
+Edad= 21
+Profesión: Estudiante
+
+Bienvenido!!!
+*/
+
+import javax.swing.JOptionPane;
+
+public class DatosBasicos {
+
+	public static void main(String[] args) {
+		String nombre, profesion, mensaje;
+		int documento, edad;
+		nombre= JOptionPane.showInputDialog("Digite su nombre completo");
+		documento= Integer.parseInt(JOptionPane.showInputDialog("Digite el numero de su documento"));
+		edad= Integer.parseInt(JOptionPane.showInputDialog("Digite su edad"));
+		profesion= JOptionPane.showInputDialog("Digite su profesion");
+		mensaje= "DATOS INGRESADOS \n";
+		mensaje+="Nombre completo: "+nombre+"\n";
+		mensaje+="Documento: "+documento+"\n";
+		mensaje+="Edad: "+edad+"\n";
+		mensaje+="Profesion: "+profesion+"\n";
+		mensaje+="\n";
+		mensaje+="!!BIENVENIDO¡¡";
+		JOptionPane.showMessageDialog(null, mensaje, "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	}
+
+}

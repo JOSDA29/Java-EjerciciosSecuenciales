@@ -1,0 +1,40 @@
+/*Dado el precio de un artıculo, la cantidad de artículos a comprar y el valor entregado por 
+ * el cliente, calcular la devuelta (si le alcanza) o imprimir un mensaje que le indique que 
+ * le hace falta dinero para pagar la cuenta.
+
+cuenta = cantidad x precio
+devuelta = valorPagado- cuenta*/
+
+import javax.swing.JOptionPane;
+
+public class PrecioArticulo {
+
+	public static void main(String[] args) {
+		double cuenta, precioArticulo, costoTotal, valorFaltante ,devuelta;
+		int cantidadArticulo;
+		cuenta= Double.parseDouble(JOptionPane.showInputDialog("Digite la cantidad de dinero que posee"));
+		precioArticulo= Double.parseDouble(JOptionPane.showInputDialog("Digite el precio del articulo a llevar"));
+		cantidadArticulo= Integer.parseInt(JOptionPane.showInputDialog("Digite la cantidad de articulos a llevar"));
+		costoTotal= precioArticulo*cantidadArticulo;
+		valorFaltante= costoTotal-cuenta;
+		devuelta= cuenta-costoTotal;
+		
+		if (cantidadArticulo == 0) {
+			valorFaltante= precioArticulo-cuenta;
+			devuelta= cuenta-precioArticulo;
+			
+			if (precioArticulo>cuenta) {
+				JOptionPane.showMessageDialog(null, "Dinero Insuficiente le faltan $"+valorFaltante, "RESULT", JOptionPane.INFORMATION_MESSAGE);
+			} else {
+				JOptionPane.showMessageDialog(null, "Su devuelta sera de $"+devuelta, "RESULT", JOptionPane.INFORMATION_MESSAGE);
+			}
+		}
+		
+		if (costoTotal>cuenta) {
+			JOptionPane.showMessageDialog(null, "Dinero Insuficiente le faltan $"+valorFaltante, "RESULT", JOptionPane.INFORMATION_MESSAGE);
+		} else {
+			JOptionPane.showMessageDialog(null, "Su devuelta sera de $"+devuelta, "RESULT", JOptionPane.INFORMATION_MESSAGE);
+		}
+	}
+
+}

@@ -1,0 +1,15 @@
+/*Modificar el algoritmo anterior para que muestre el 15% de un valor ingresado por el usuario.*/
+
+import javax.swing.JOptionPane;
+
+public class ValorConstante2 {
+
+	public static void main(String[] args) {
+		final int constante= 29;
+		int valor= Integer.parseInt(JOptionPane.showInputDialog("Digite un valor numerico para ver su 15%"))
+		double porcentaje=
+		System.out.print(porcentaje);
+
+	}
+
+}

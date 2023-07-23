@@ -1,0 +1,10 @@
+
+public class ValorConstante {
+
+	public static void main(String[] args) {
+		final int constante= 29;
+		double porcentaje= 0.15+constante;
+		System.out.print(constante*porcentaje);
+	}
+
+}

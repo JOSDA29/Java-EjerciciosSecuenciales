@@ -1,0 +1,11 @@
+/*Calcular el 15% de un valor constante.*/
+
+public class ValorConstante {
+
+	public static void main(String[] args) {
+		final int constante= 29;
+		double porcentaje= 0.15*constante+constante;
+		System.out.print("El 15% del valor contante "+constante+" es "+porcentaje);
+	}
+
+}

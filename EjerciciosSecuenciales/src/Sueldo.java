@@ -1,0 +1,22 @@
+/*Cree un algoritmo que reciba como entrada el sueldo de una persona y sus horas extras trabajadas 
+ * y luego imprima el Sueldo total de esta persona dado que cada hora extra vale $3000.*/
+
+import javax.swing.JOptionPane;
+
+public class Sueldo {
+	public static void main (String arg[]) {
+		double sueldo, sueldoTotal;
+		int horas, cantidadHoras;
+		String mensaje;
+		sueldo= Double.parseDouble(JOptionPane.showInputDialog("Digite su salario"));
+		horas= Integer.parseInt(JOptionPane.showInputDialog("Digite las horas extras trabajadas"));
+		cantidadHoras= horas*3000;
+		sueldoTotal= sueldo+cantidadHoras;
+		mensaje= "SUELDO Y HORAS EXTRA \n";
+		mensaje+="Sueldo: "+sueldo+"\n";
+		mensaje+="Horas: "+horas+"\n";
+		mensaje+="Valor horas extra: "+cantidadHoras+"\n";
+		mensaje+="Sueldo Total: "+sueldoTotal;
+		JOptionPane.showMessageDialog(null, mensaje, "RESULT", JOptionPane.INFORMATION_MESSAGE);
+	}
+}
